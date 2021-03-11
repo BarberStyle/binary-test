@@ -15,8 +15,14 @@ app.use(express.json({ extended: true }));
 //importar rutas
 //Ruting
 
-app.use('/api/binaryGap', require('./routes/binaryGap'));
+app.use('/api/binarygap', require('./routes/binaryGap'));
+
+app.get('/',(req, res)=> {
+     res.send("HOLA BABY LO ESTAS HACIENDO BIEN");
+})
 
 
-const port = process.env.PORT || 4000
+
+
+const port = process.env.PORT || 3000
 app.listen(port, '0.0.0.0', () => console.log(`Server running on port: ${port}`));
